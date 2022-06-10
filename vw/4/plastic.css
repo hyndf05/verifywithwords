@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --hs: 47px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+*:not(.material-symbols-outlined) {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+html, body {
+  background-color: #f9f9fb;
+  height: 100%;
+  width: 100%;
+}
+
+.solid {
+  width: 100%;
+  height: 100%;
+}
+
+.site-as {
+  width: 100%;
+  height: var(--hs);
+  border-bottom: 1px solid #f7f5f1; 
+  box-shadow: 0 0 3px #e1e1e1;
+  background-color: rgba(255,255,255,.92);
+  backdrop-filter: blur(4px);
+}
+
+.s-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.site-as span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 11px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #26466c;
+}
+
+.flux {
+  width: 100%;
+  height: calc(100% - var(--hs));
+}
+
+.f-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  position: relative;
+  top: 13px;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  background-color: #ffffff;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.sn-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.sn-inner .text {
+  width: 100%;
+  height: 70px;
+}
+
+.sn-inner .text, .sn-inner .put {
+  padding: 7px 11px 0 11px;
+}
+
+.sn-inner .text span {
+  display: block;
+}
+
+.sn-inner .text span:nth-child(1) {
+  font-size: 23px;
+  color: #000000;
+}
+
+.sn-inner .text span:nth-child(2) {
+  font-size: 14px;
+  position: relative;
+  top: 2.6px;
+  color: #3e0707;
+}
+
+.sn-inner .put {
+  width: 100%;
+  height: 47px;
+}
+
+.check {
+  width: 87%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  box-shadow: 0 0 7px #e3e3e3;
+}
+
+.check input {
+  border-radius: 4px 0 0 4px;
+  padding: 0 8px;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+}
+
+.check span {
+  min-width: 40px;
+  font-weight: 200;
+  font-size: 27px;
+  height: 100%;
+  color: #08411a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-left: 1px solid #e1e1e1;
+}
+
+.copy {
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  position: relative;
+  top: 11px;
+}
+
+.copy span {
+  font-size: 12px;
+  display: block;
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
   --hs: 47px;
@@ -27,12 +27,17 @@ html, body {
 }
 
 .site-as {
-  width: 100%;
+  width: 94%;
   height: var(--hs);
-  border-bottom: 1px solid #f7f5f1; 
-  box-shadow: 0 0 3px #e1e1e1;
+  border-bottom: 1px solid #f7f5f1;
+  box-shadow: 0 0 11px #e1e1e1;
   background-color: rgba(255,255,255,.92);
   backdrop-filter: blur(4px);
+  margin: 0 auto;
+  position: relative;
+  top: 13px;
+  border-radius: 20px;
+  border: 1px solid rgba(38, 70, 108, .2);
 }
 
 .s-inner {
@@ -42,18 +47,21 @@ html, body {
 }
 
 .site-as span {
+  font-family: 'Ubuntu', sans-serif;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 11px;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 400;
   color: #26466c;
 }
 
 .flux {
   width: 100%;
-  height: calc(100% - var(--hs));
+  height: calc(100% - var(--hs) - 13px);
+  position: relative;
+  top: 13px;
 }
 
 .f-inner {
@@ -65,11 +73,12 @@ html, body {
   position: relative;
   top: 13px;
   margin: 0 auto;
-  width: 100%;
+  width: 94%;
   height: 200px;
   background-color: #ffffff;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-radius: 7px;
+  box-shadow: 0 0 18px #e1e1e1;
+  border: 1px solid rgba(38, 70, 108, .2);
 }
 
 .sn-inner {
@@ -88,6 +97,7 @@ html, body {
 
 .sn-inner .text span {
   display: block;
+  position: relative;
 }
 
 .sn-inner .text span:nth-child(1) {
@@ -108,7 +118,7 @@ html, body {
 }
 
 .check {
-  width: 87%;
+  width: 91%;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -151,4 +161,67 @@ html, body {
 .copy span {
   font-size: 12px;
   display: block;
+}
+
+.copy span.rt {
+  position: relative;
+  top: 4px;
+}
+
+.sn-inner .text span:nth-child(1)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: .3s width;
+}
+
+.site-container-connect {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 100%;
+  transition: .3s;
+  background-color: rgba(255, 255, 255, .641);
+}
+
+.site-container-progress {
+  width: 44vw;
+  height: 2px;
+  animation: progress1 1.7s infinite;
+  background-color: #26466c;
+  top: 0;
+  position: fixed;
+  transition: .25s;
+}
+
+.site-container-progress.remove {
+  width: 0;
+  opacity: 0;
+}
+
+.section:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  transition: .25s;
+  position: absolute;
+  z-index: 1;
+} 
+
+.section.sg:before {
+  background-color: rgba(255,255,255,.3);
+  top: 0;
+} 
+
+@keyframes progress1 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
 }
